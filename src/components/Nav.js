@@ -1,6 +1,12 @@
+import logo from '../images/logo.png'
+
 const Nav = () => {
   return (
-      <div>Nav</div>
+      <nav>
+        <div className="logo-area">
+          <img className="logo" src=""/>
+        </div>
+      </nav>
   )
 }
 export default Nav

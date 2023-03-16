@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,500;1,700&display=swap');
 
+* {
+  font-family: 'Nunito', sans-serif;
+}
+
 html {
   margin: 0;
   padding: 0;
 }
 
-* {
-  font-family: 'Nunito', sans-serif;
+body {
+  text-align: center;
 }
 
 .home-btn {
@@ -18,5 +22,9 @@ html {
   border-radius: 1.5rem;
   border: none;
   padding: 12px 30px;
+}
 
+.home-btn:hover {
+  transition: 3s;
+  background: linear-gradient(260deg, #fe3072, #ff5940);
 }
