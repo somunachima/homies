@@ -2,21 +2,22 @@ import Nav from "../components/Nav"
 
 const Home = () => {
 
-  const authToken = true
+  const authToken = false
 
   const handleClick = () => {
-    console.log('clicked')
+     console.log('clicked')
   }
+
   return (
-        <>
-        <Nav minimal={false}/>
+      <div className="overlay">
+        <Nav minimal={false} authToken={authToken}/>
         <div className="home">
           <h1>Swipe Right</h1>
           <button className="home-btn" onClick={handleClick}>
               {authToken ? 'Signout' : 'Create Account'}
           </button>
         </div>
-        </>
+      </div>
     )
 }
 export default Home
