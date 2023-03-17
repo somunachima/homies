@@ -1,4 +1,4 @@
-import whiteLogo from '../images/logo_black.png'
+import blackLogo from '../images/logo_black.png'
 import colorLogo from '../images/logo_yellow.png'
 
 const Nav = ({minimal, authToken}) => {
@@ -6,7 +6,7 @@ const Nav = ({minimal, authToken}) => {
   return (
       <nav>
         <div className="logo-area">
-          <img className="logo" src={minimal ? colorLogo : whiteLogo}/>
+          <img className="logo" src={minimal ? blackLogo : colorLogo}/>
         </div>
 
         {!authToken && <button className="nav-btn" >Log in</button>}
