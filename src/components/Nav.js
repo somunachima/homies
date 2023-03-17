@@ -1,4 +1,4 @@
-import whiteLogo from '../images/logo_white.png'
+import whiteLogo from '../images/logo_black.png'
 import colorLogo from '../images/logo_yellow.png'
 
 const Nav = ({minimal, authToken}) => {
