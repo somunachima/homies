@@ -1,7 +1,7 @@
 import blackLogo from '../images/logo_black.png'
 import colorLogo from '../images/logo_yellow.png'
 
-const Nav = ({minimal, authToken}) => {
+const Nav = ({ minimal, authToken }) => {
 
   return (
       <nav>
@@ -9,7 +9,8 @@ const Nav = ({minimal, authToken}) => {
           <img className="logo" src={minimal ? blackLogo : colorLogo}/>
         </div>
 
-        {!authToken && <button className="nav-btn" >Log in</button>}
+        {!authToken && !minimal && <button
+          className="nav-btn" >Log in</button>}
       </nav>
   )
 }
