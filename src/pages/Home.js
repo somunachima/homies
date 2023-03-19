@@ -15,17 +15,17 @@ const Home = () => {
   return (
       <div className="overlay">
       <Nav minimal={false} authToken={authToken}/>
-      <div className="home">
-        <h1>Swipe Right</h1>
-        <button className="home-btn" onClick={handleClick}>
-            {authToken ? 'Signout' : 'Create Account'}
-        </button>
+        <div className="home">
+          <h1>Swipe Right</h1>
+          <button className="home-btn" onClick={handleClick}>
+              {authToken ? 'Signout' : 'Create Account'}
+          </button>
 
-        {showModal && (
-          <AuthModal setShowModal={setShowModal}/>
-        )}
+          {showModal && (
+            <AuthModal setShowModal={setShowModal}/>
+          )}
 
-      </div>
+        </div>
       </div>
     )
 }
