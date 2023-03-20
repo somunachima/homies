@@ -72,6 +72,11 @@ nav .nav-btn:hover {
   transform: scale(1.1);
 }
 
+nav .nav-btn:disabled {
+  color: rgb(255, 210, 3);
+  background-color: rgb(189, 180, 180);
+}
+
 nav .logo-area {
   width: 170px;
   margin: 10px;
