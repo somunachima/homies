@@ -76,3 +76,19 @@ nav .logo-area .logo {
   width: 100%;
 
 }
+
+/* AuthModal */
+.auth-modal {
+  position: absolute;
+  top: 250px;
+  right: 510px;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  width: 20%;
+  height: 600px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}

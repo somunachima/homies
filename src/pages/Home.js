@@ -21,10 +21,10 @@ const Home = () => {
               {authToken ? 'Signout' : 'Create Account'}
           </button>
 
+
           {showModal && (
             <AuthModal setShowModal={setShowModal}/>
           )}
-
         </div>
       </div>
     )
