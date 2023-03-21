@@ -7,6 +7,8 @@ const AuthModal = ({ setShowModal }) => {
   const [ confirmPassword, setConfirmPassword ] = useState(null)
   const [ error, setError ] = useState(null)
 
+  console.log(email, password, confirmPassword)
+
   const handleClick = () => {
     setShowModal(false)
   }
@@ -45,10 +47,14 @@ const AuthModal = ({ setShowModal }) => {
             type="password-check"
             id="password-check"
             name="password-check"
-            placeholder="confirm password"
+            placeholder="Confirm Password"
             required={true}
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
+
+          <input className="form-btn" type="submit"/>
+          <p>{error}</p>
+
         </form>
 
         AUTH MODAL

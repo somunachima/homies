@@ -33,6 +33,23 @@ body {
   transform: scale(1.1);
 }
 
+.form-btn {
+  color: rgb(121, 119, 119);
+  background-color: rgb(255, 255, 255);
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: solid 2px rgb(121, 119, 119);
+  margin: 6px;
+}
+
+.form-btn:hover {
+  color: rgb(48, 48, 48);
+  border: solid 2px rgb(48, 48, 48);
+}
+
 .overlay {
   width: 100vw;
   height: 100vh;
