@@ -132,6 +132,7 @@ nav .logo-area .logo {
   flex-direction: column;
 }
 
+.auth-modal input[type=password-check],
 .auth-modal input[type=password],
 .auth-modal input[type=email] {
   padding: 8px;
