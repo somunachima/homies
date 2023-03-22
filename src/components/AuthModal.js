@@ -1,15 +1,13 @@
 import { useState } from "react"
 
 
-const AuthModal = ({ setShowModal }) => {
+const AuthModal = ({ setShowModal, setIsSignUp, isSignUp }) => {
   const [ email, setEmail ] = useState(null)
   const [ password, setPassword ] = useState(null)
   const [ confirmPassword, setConfirmPassword ] = useState(null)
   const [ error, setError ] = useState(null)
 
   console.log(email, password, confirmPassword)
-
-  const isSignUp = true
 
   const handleClick = () => {
     setShowModal(false)
@@ -53,14 +51,14 @@ const AuthModal = ({ setShowModal }) => {
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          <input
+          {isSignUp && <input
             type="password-check"
             id="password-check"
             name="password-check"
             placeholder="Confirm Password"
             required={true}
             onChange={(e) => setConfirmPassword(e.target.value)}
-          />
+          />}
 
           <input className="form-btn" type="submit"/>
           <p>{error}</p>
