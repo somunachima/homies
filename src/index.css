@@ -13,6 +13,10 @@ body {
   text-align: center;
 }
 
+h2 {
+  font-style: italic;
+}
+
 /* home */
 
 .home-btn {
@@ -90,7 +94,7 @@ nav .nav-btn:hover {
 }
 
 nav .nav-btn:disabled {
-  color: rgb(255, 210, 3);
+  color: rgb(185, 152, 3);
   background-color: rgb(189, 180, 180);
 }
 
@@ -112,8 +116,8 @@ nav .logo-area .logo {
   /* right: 510px; */
   margin-left: auto;
   margin-right: auto;
-  max-width: 260px;
-  height: 400px;
+  max-width: 360px;
+  height: 600px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   padding: 40px;
@@ -121,4 +125,16 @@ nav .logo-area .logo {
 
 .auth-modal .close-icon {
   float: right;
+}
+
+.auth-modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-modal input[type=password],
+.auth-modal input[type=email] {
+  padding: 8px;
+  margin: 8px;
+  font-size: 17px;
 }

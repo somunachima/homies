@@ -9,15 +9,25 @@ const AuthModal = ({ setShowModal }) => {
 
   console.log(email, password, confirmPassword)
 
+  const isSignUp = true
+
   const handleClick = () => {
     setShowModal(false)
   }
 
   const handleSubmit = (e) => {
       e.preventDefault()
+      try {
+        if( isSignUp && ( password !== confirmPassword )) {
+            setError("Passwords need to match!")
+        }
+        console.log("make a post request to our database")
+
+      } catch (error) {
+          console.log(error)
+      }
   }
 
-  const isSignUp = true
 
   return (
       <div className="auth-modal">
@@ -56,8 +66,9 @@ const AuthModal = ({ setShowModal }) => {
           <p>{error}</p>
 
         </form>
+        <hr/>
+        <h2>GET THE APP</h2>
 
-        AUTH MODAL
       </div>
   )
 }
