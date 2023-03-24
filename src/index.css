@@ -210,20 +210,20 @@ nav .logo-area .logo {
   margin-right: 10px;
 }
 
-.onboarding form input[type="radio"] {
+.onboarding form input[type=radio] {
   display: none;
 }
 
-.onboarding form input[type="radio"]:checked + label {
+.onboarding form input[type=radio]:checked + label {
   border: solid 2px rgb(255, 89, 64);
   color: rgb(255, 89, 64);
 }
 
-.onboarding form input[type="number"] {
+.onboarding form input[type=number] {
   width: 10%;
 }
 
-.onboarding form input[type="submit"] {
+.onboarding form input[type=submit]:active {
   color: rgb(121, 119, 119);
   background-color: rgb(255, 255, 255);
   font-size: 12px;
@@ -236,16 +236,20 @@ nav .logo-area .logo {
   margin: 10px 0px;
 }
 
-.onboarding form input[type="submit"]:hover {
+.onboarding form input[type=submit]:hover {
   color: rgb(0, 0, 0);
   border: solid 2px rgb(0, 0, 0);
   background-color: rgb(255, 210, 3);
   transform: scale(1.1);
 }
 
-.onboarding form input[type="submit"]:active {
+/* .onboarding form input[type="submit"]:active {
   color: rgb(121, 119, 119);
   border: solid 2px rgb(121, 119, 119);
   background-color: rgb(254, 235, 151);
   transform: scale(1.1);
+} */
+
+.onboarding form .profile-picture img {
+  width: 100%
 }
