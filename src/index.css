@@ -158,3 +158,23 @@ nav .logo-area .logo {
   background-color: rgb(255, 210, 3);
   transform: scale(1.1);
 }
+
+/* Onboarding */
+
+.onboarding form {
+  display: flex;
+  justify-content: center;
+}
+
+.onboarding form section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.onboarding form input {
+  padding: 15px 30px;
+  margin: 10px 0;
+  font-size: 15px;
+
+}
