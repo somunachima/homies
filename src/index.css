@@ -166,6 +166,10 @@ nav .logo-area .logo {
   justify-content: center;
 }
 
+.onboarding form label {
+  font-weight: 800;
+}
+
 .onboarding form section {
   display: flex;
   flex-direction: column;
@@ -208,6 +212,7 @@ nav .logo-area .logo {
   border-radius: 10px;
   transition: all 0.3s;
   margin-right: 10px;
+  font-weight: 500;
 }
 
 .onboarding form input[type=radio] {
@@ -250,6 +255,7 @@ nav .logo-area .logo {
   transform: scale(1.1);
 } */
 
-.onboarding form .profile-picture img {
-  width: 100%
+.onboarding form .pic-container img {
+  width: 100%;
+  border-radius: 2rem;
 }
