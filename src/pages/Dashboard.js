@@ -2,7 +2,7 @@ import TinderCard from "react-tinder-card"
 import { useState } from "react"
 
 const Dashboard = () => {
-  const db = [
+  const character = [
     {
       name: 'Richard Hendricks',
       url: './img/richard.jpg'
@@ -24,7 +24,7 @@ const Dashboard = () => {
       url: './img/dinesh.jpg'
     },
   ]
-  
+
   const [lastDirection, setLastDirection] = useState()
 
   const swiped = (direction, nameToDelete) => {
@@ -32,13 +32,13 @@ const Dashboard = () => {
     setLastDirection(direction)
   }
 
-  constOfFrame = (name) => {
+  const outOfFrame = (name) => {
     console.log(name + ' left the screen!')
   }
 
   return (
       <div className="dashboard">
-          <ChatContainer/>
+          {/* <ChatContainer/> */}
           <div className="swiper-container">
             <div className="card-container">
               <TinderCard
@@ -52,6 +52,9 @@ const Dashboard = () => {
                       <h3>{character.name}</h3>
                   </div>
               </TinderCard>
+              <div className="swipe-info">
+                  {lastDirection ? <p>You swiped {lastDirection}</p> : <p/>}
+              </div>
             </div>
           </div>
       </div>
