@@ -1,6 +1,6 @@
 import { useState } from "react";
 
 const ChatContainer = () => {
-  return <div>Chat</div>
+  return <div>ChatContainer</div>
 }
 export default ChatContainer

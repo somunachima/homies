@@ -268,6 +268,20 @@ nav .logo-area .logo {
 /* Dashboard */
 .dashboard {
   display: flex;
+  justify-content: space-between;
+}
+
+.dashboard .swipe-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.dashboard .card-container {
+  width: 400px;
+  height: 650px;
 }
 
 .swipe {
