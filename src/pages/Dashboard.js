@@ -1,27 +1,28 @@
-import React, { useState } from "react"
+import React, {useState} from "react"
 import TinderCard from "react-tinder-card"
+import ChatContainer from "../components/ChatContainer"
 
 const Dashboard = () => {
   const characters = [
     {
       name: 'Richard Hendricks',
-      url: './img/richard.jpg'
+      url: 'https://imgur.com/oPj4A8u.jpg'
     },
     {
       name: 'Erlich Bachman',
-      url: './img/erlich.jpg'
+      url: 'https://imgur.com/oPj4A8u.jpg'
     },
     {
       name: 'Monica Hall',
-      url: './img/monica.jpg'
+      url: 'https://imgur.com/oPj4A8u.jpg'
     },
     {
       name: 'Jared Dunn',
-      url: './img/jared.jpg'
+      url: 'https://imgur.com/oPj4A8u.jpg'
     },
     {
       name: 'Dinesh Chugtai',
-      url: './img/dinesh.jpg'
+      url: 'https://imgur.com/oPj4A8u.jpg'
     }
   ]
 
@@ -39,7 +40,7 @@ const Dashboard = () => {
   return (
       <>
         <div className="dashboard">
-            {/* <ChatContainer/> */}
+            <ChatContainer/>
             <div className="swiper-container">
               <div className="card-container">
 
