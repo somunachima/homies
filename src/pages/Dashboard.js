@@ -48,7 +48,7 @@ const Dashboard = () => {
                     className="swipe"
                     key={character.name}
                     onSwipe={(dir) => swiped(dir, character.name)}
-                    onCardLeftScreen={() => outfFrame(character.name)}>
+                    onCardLeftScreen={() => outOfFrame(character.name)}>
                     <div
                         style={{backgroundImage: "url(" + character.url + ")"}}
                         className="card">
