@@ -288,12 +288,6 @@ nav .logo-area .logo {
   position: absolute;
 }
 
-/* .card-container {
-  width: 90vw;
-  max-width: 260px;
-  height: 300px;
-} */
-
 .card {
   width: 400px;
   height: 650px;
@@ -304,8 +298,17 @@ nav .logo-area .logo {
 }
 
 .card h3 {
+  margin-top: 0;
+}
+
+.dashboard .swipe-info {
   position: absolute;
   bottom: 0;
-  margin: 10px;
-  color: #fff;
+  padding: 10px;
 }
+
+/* Chat Container */
+
+
+
+
