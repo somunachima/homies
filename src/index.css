@@ -309,6 +309,35 @@ nav .logo-area .logo {
 
 /* Chat Container */
 
+.chat-container {
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+  rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  width: 30%;
+  text-align: left;
+  z-index: 1;
+}
 
+.chat-input .secondary-btn {
+  /* color: rgb(0, 0, 0); */
+  color: rgb(121, 119, 119);
+  background-color: rgb(255, 255, 255);
+  border: solid 2px rgb(121, 119, 119);
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 2rem;
+  border: none;
+  padding: 8px 20px;
+  transition: all 1.1s;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 15px;
+}
 
-
+.chat-input .secondary-btn:hover {
+  opacity: 1;
+  color: rgb(0, 0, 0);
+  transform: scale(1.1);
+  border: solid 2px rgb(0, 0, 0);
+  background-color: rgb(255, 210, 3);
+}

@@ -1,17 +1,16 @@
-import { useState } from "react";
-import ChatHeader from "../components/ChatHeader"
-import MatchesDisplay from "../components/MatchesDisplay"
-import ChatDisplay from "../components/ChatDisplay"
+import ChatHeader from "./ChatHeader"
+import MatchesDisplay from "./MatchesDisplay"
+import ChatDisplay from "./ChatDisplay"
 
 const ChatContainer = () => {
     return (
         <div className="chat-container">
           <ChatHeader/>
 
-            <div>
-              <button className="option">Matches</button>
-              <button className="option">Chat</button>
-            </div>
+          <div>
+            <button className="option">Matches</button>
+            <button className="option">Chat</button>
+          </div>
 
           <MatchesDisplay/>
 
