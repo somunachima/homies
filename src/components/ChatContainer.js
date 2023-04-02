@@ -1,4 +1,7 @@
 import { useState } from "react";
+import ChatHeader from "../components/ChatHeader"
+import MatchesDisplay from "../components/MatchesDisplay"
+import ChatDisplay from "../components/ChatDisplay"
 
 const ChatContainer = () => {
     return (
@@ -12,10 +15,8 @@ const ChatContainer = () => {
 
           <MatchesDisplay/>
 
-          
+          <ChatDisplay/>
         </div>
-
-
     )
 }
 export default ChatContainer
