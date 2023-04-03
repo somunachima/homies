@@ -282,6 +282,7 @@ nav .logo-area .logo {
 .dashboard .card-container {
   width: 400px;
   height: 650px;
+  margin: auto;
 }
 
 .swipe {
@@ -295,6 +296,7 @@ nav .logo-area .logo {
   border-radius: 1.5rem;
   background-size: cover;
   background-position: center;
+  padding-top: 10px;
 }
 
 .card h3 {
@@ -339,6 +341,20 @@ nav .logo-area .logo {
   border: solid 2px rgb(121, 119, 119);
 }
 
+.chat-container .profile,
+.chat-container .log-out-icon {
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+.chat-input {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
 .chat-input .secondary-btn {
   /* color: rgb(0, 0, 0); */
   color: rgb(121, 119, 119);
@@ -362,3 +378,17 @@ nav .logo-area .logo {
   border: solid 2px rgb(0, 0, 0);
   background-color: rgb(255, 210, 3);
 }
+
+.img-container {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.img-container img {
+  width: 100%;
+}
+
+
