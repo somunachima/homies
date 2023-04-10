@@ -5,6 +5,12 @@ const uri = 'mongodb+srv://somakudu:thepassword@cluster.cixiijx.mongodb.net/?ret
 
 const app = express()
 
+app.get('/', (req, res) => {
+    res.json('Hello to my app')
+})
 
+app.get('/signup', (req, res) => {
+  res.json('Hello to my app')
+})
 
 app.listen(PORT, () => console.log('Server running on PORT ' + PORT))
