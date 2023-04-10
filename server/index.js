@@ -1,6 +1,6 @@
 const PORT = 8000
 const express = require('express')
-const {MongoClient, ServerApiVersion} = require('mongodb')
+const {MongoClient} = require('mongodb')
 const uri = "mongodb+srv://somakudu:homies2023@cluster.cixiijx.mongodb.net/?retryWrites=true&w=majority"
 
 const app = express()
@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/signup', (req, res) => {
-    res.json('Hello to my app')
+    const client = new MongoClient(uri)
 })
 
 app.get('/users', async (req, res) => {
@@ -21,7 +21,7 @@ app.get('/users', async (req, res) => {
         const database = client.db('app-data')
         const users = database.collection('users')
 
-        const returnedUsers = await users.toArray()
+        const returnedUsers = await users.find().toArray()
         res.send(returnedUsers)
     } finally {
         await client.close()
