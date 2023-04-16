@@ -2,6 +2,7 @@ const PORT = 8000
 const express = require('express')
 const {MongoClient} = require('mongodb')
 const {v1: uuidv4} = require('uuid')
+const jwt = require('jsonwebtoken')
 const uri = "mongodb+srv://somakudu:homies2023@cluster.cixiijx.mongodb.net/?retryWrites=true&w=majority"
 
 const app = express()
@@ -28,7 +29,22 @@ app.post('/signup', async (req, res) => {
             return res.status(409).send('User already exists. Please login')
         }
 
-        email.toLowerCase()
+        const sanitizedEmail = email.toLowerCase()
+
+        const data = {
+            user_id: generatedUserId,
+            email: sanitizedEmail,
+            hashed_password: hashPassword
+        }
+        const insertedUser = await users.insertOne(data)
+
+        const token = jwt.sign(insertedUser, sanitizedEmail, {
+            exipresIn: 60 * 24,
+        })
+
+        res.status(201).json({token, userId: generatedUserId, email: sanitizedEmail})
+    } catch (err) {
+        console.log(err)
     }
 
 })
