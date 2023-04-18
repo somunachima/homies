@@ -3,9 +3,14 @@ const express = require('express')
 const {MongoClient} = require('mongodb')
 const {v1: uuidv4} = require('uuid')
 const jwt = require('jsonwebtoken')
+const cors = require('cors')
+const bcrypt = require('bcrypt')
+
 const uri = "mongodb+srv://somakudu:homies2023@cluster.cixiijx.mongodb.net/?retryWrites=true&w=majority"
 
 const app = express()
+app.use(cors())
+app.use(express.json())
 
 app.get('/', (req, res) => {
     res.json('Hello to my app')
@@ -13,6 +18,7 @@ app.get('/', (req, res) => {
 
 app.post('/signup', async (req, res) => {
     const client = new MongoClient(uri)
+    console.log(req.body)
     const {email, password} = req.body
 
     const generatedUserId = uuidv4()
