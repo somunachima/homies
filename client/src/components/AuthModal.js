@@ -26,6 +26,8 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
 
         const response = await axios.post('https://localhost:8000/signup', {email, password})
 
+        
+
         const success = response.status === 201
 
         if (success) navigate ('/onboarding')

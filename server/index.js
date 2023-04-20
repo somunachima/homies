@@ -1,6 +1,6 @@
 const PORT = 8000
 const express = require('express')
-const {MongoClientver } = require('mongodb')
+const {MongoClient} = require('mongodb')
 const {v4: uuidv4} = require('uuid')
 const jwt = require('jsonwebtoken')
 const cors = require('cors')
@@ -18,7 +18,6 @@ app.get('/', (req, res) => {
 
 app.post('/signup', async (req, res) => {
     const client = new MongoClient(uri)
-    console.log(req.body)
     const {email, password} = req.body
 
     const generatedUserId = uuidv4()
@@ -28,7 +27,6 @@ app.post('/signup', async (req, res) => {
         await client.connect()
         const database = client.db('app-data')
         const users = database.collection('users')
-
         const existingUser = await users.findOne({email})
 
         if (existingUser) {
