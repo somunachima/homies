@@ -22,7 +22,7 @@ app.post('/signup', async (req, res) => {
     const {email, password} = req.body
 
     const generatedUserId = uuidv4()
-    const hashPassword = await bcrypt.hash(password, 10)
+    const hashedPassword = await bcrypt.hash(password, 10)
 
     try {
         await client.connect()
@@ -40,8 +40,9 @@ app.post('/signup', async (req, res) => {
         const data = {
             user_id: generatedUserId,
             email: sanitizedEmail,
-            hashed_password: hashPassword
+            hashed_password: hashedPassword
         }
+
         const insertedUser = await users.insertOne(data)
 
         const token = jwt.sign(insertedUser, sanitizedEmail, {
@@ -51,6 +52,8 @@ app.post('/signup', async (req, res) => {
         res.status(201).json({token, userId: generatedUserId, email: sanitizedEmail})
     } catch (err) {
         console.log(err)
+    } finally {
+        await client.close()
     }
 
 })
