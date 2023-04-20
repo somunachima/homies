@@ -1,7 +1,7 @@
 const PORT = 8000
 const express = require('express')
-const {MongoClient} = require('mongodb')
-const {v1: uuidv4} = require('uuid')
+const {MongoClientver } = require('mongodb')
+const {v4: uuidv4} = require('uuid')
 const jwt = require('jsonwebtoken')
 const cors = require('cors')
 const bcrypt = require('bcrypt')
@@ -25,11 +25,11 @@ app.post('/signup', async (req, res) => {
     const hashPassword = await bcrypt.hash(password, 10)
 
     try {
-        client.connect()
+        await client.connect()
         const database = client.db('app-data')
         const users = database.collection('users')
 
-        const existingUser = users.findOne({email})
+        const existingUser = await users.findOne({email})
 
         if (existingUser) {
             return res.status(409).send('User already exists. Please login')
