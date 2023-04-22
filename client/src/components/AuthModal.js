@@ -1,12 +1,14 @@
 import { useState } from "react"
 import axios from 'axios'
 import { useNavigate } from "react-router-dom"
+import {useCookie} from "react-cookie"
 
 const AuthModal = ({ setShowModal, isSignUp }) => {
   const [ email, setEmail ] = useState(null)
   const [ password, setPassword ] = useState(null)
   const [ confirmPassword, setConfirmPassword ] = useState(null)
   const [ error, setError ] = useState(null)
+  const [cookies, setCookies] = useCookies(null)
 
   let navigate = useNavigate()
 
@@ -26,7 +28,7 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
 
         const response = await axios.post('https://localhost:8000/signup', {email, password})
 
-        
+
 
         const success = response.status === 201
 

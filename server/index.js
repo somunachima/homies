@@ -50,8 +50,6 @@ app.post('/signup', async (req, res) => {
         res.status(201).json({token, userId: generatedUserId, email: sanitizedEmail})
     } catch (err) {
         console.log(err)
-    } finally {
-        await client.close()
     }
 
 })
